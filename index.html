@@ -8,27 +8,68 @@
 </head>
 <body>
     <main>
-        <header >
-            <img id="back-button" alt="Back Button" title="Back"/>
-            <img id="search-button" alt="Search" title="Search"/>
+        <header>
+          
+           <div class="backButton" id="back">
+            <img id="back-button" alt="Back Button" title="Back" data-src="img/caret-left-md.svg" class="iconic iconic-md"/>
+            </div>
+            
             <input type="text" id="search-input" placeholder="search" />
+            
+            <div class="searchButtonDiv">
+            <img id="search-button" alt="Search" title="Search" data-src="img/magnifying-glass.svg" class="iconic iconic-md"/>
+            </div>
+            
+            <div id="modalButton"class="modalBtn">
+            <img id="modal-button" alt="Modal" title="Modal" data-src="img/cogs-md.svg" class="iconic iconic-md"/>
+            </div>
+            
+            
+           
+        
         </header>
+        
+        
         
         <div class="page" id="search-results">
             <section class="title"></section>
-            <section class="content"></section>
+            <section class="content flex-container"></section>
         </div>
         
         <div class="page" id="recommend-results">
             <section class="title"></section>
-            <section class="content"></section>
+            <section class="content flex-container"></section>
         </div>
+        
+        <div class="overlay hide">&nbsp;</div>
+
+    <div class="modal off">
+        <div class="modal-header">
+            <h2>Preferences</h2>
+        </div>
+        <div class="modal-radio">       
+            <input type="radio" name="movies" value="movie" id="movie" checked>
+            <label for="movie">Movie</label>
+            
+            <input type="radio" name="tv shows" value="tv" id="tv" checked>
+            <label for="Tv">Tv</label>
+
+        </div>
+        <button class="cancelButton">Cancel</button>
+        <button class="saveButton">Save</button>
+
+    </div>
+
     </main>
  
-    
+    <footer>
     <div class="attribution">
+      <a href="https://www.themoviedb.org/" alt="the movieDB">
+          <img src="img/movie.svg" alt="logoMDB" id="movieDb"/>
+      </a>
        
     </div>
+    </footer>
     
     <script src="js/iconic.min.js"></script>
     <script src="js/key.js"></script>
